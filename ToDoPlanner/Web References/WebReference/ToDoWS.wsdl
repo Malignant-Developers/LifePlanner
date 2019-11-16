@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CrearTelefono">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="telefono" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTelefonoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CrearTelefonoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearCorreoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CrearCorreoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTarea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTareaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CrearTareaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTelefonos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerTelefonosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTelefonosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCorreos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerCorreosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCorreosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTareas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerTareasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTareasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTelefono">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_telefono" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="telefono" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTelefonoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarTelefonoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_correo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCorreoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarCorreoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTarea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_tarea" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tarea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTareaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarTareaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarTelefono">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_telefono" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarTelefonoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BorrarTelefonoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_correo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarCorreoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BorrarCorreoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarTarea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_tarea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarTareaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BorrarTareaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CrearTelefonoSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearTelefono" />
+  </wsdl:message>
+  <wsdl:message name="CrearTelefonoSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearTelefonoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearCorreo" />
+  </wsdl:message>
+  <wsdl:message name="CrearCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearTareaSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearTarea" />
+  </wsdl:message>
+  <wsdl:message name="CrearTareaSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearTareaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTelefonosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTelefonos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTelefonosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTelefonosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCorreos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTareasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTareas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTareasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTareasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTelefonoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarTelefono" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTelefonoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarTelefonoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarCorreo" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTareaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarTarea" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTareaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarTareaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarTelefonoSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarTelefono" />
+  </wsdl:message>
+  <wsdl:message name="BorrarTelefonoSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarTelefonoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarCorreo" />
+  </wsdl:message>
+  <wsdl:message name="BorrarCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarTareaSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarTarea" />
+  </wsdl:message>
+  <wsdl:message name="BorrarTareaSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarTareaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ToDoWSSoap">
+    <wsdl:operation name="CrearTelefono">
+      <wsdl:input message="tns:CrearTelefonoSoapIn" />
+      <wsdl:output message="tns:CrearTelefonoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearCorreo">
+      <wsdl:input message="tns:CrearCorreoSoapIn" />
+      <wsdl:output message="tns:CrearCorreoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTarea">
+      <wsdl:input message="tns:CrearTareaSoapIn" />
+      <wsdl:output message="tns:CrearTareaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTelefonos">
+      <wsdl:input message="tns:ObtenerTelefonosSoapIn" />
+      <wsdl:output message="tns:ObtenerTelefonosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCorreos">
+      <wsdl:input message="tns:ObtenerCorreosSoapIn" />
+      <wsdl:output message="tns:ObtenerCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTareas">
+      <wsdl:input message="tns:ObtenerTareasSoapIn" />
+      <wsdl:output message="tns:ObtenerTareasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTelefono">
+      <wsdl:input message="tns:ActualizarTelefonoSoapIn" />
+      <wsdl:output message="tns:ActualizarTelefonoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCorreo">
+      <wsdl:input message="tns:ActualizarCorreoSoapIn" />
+      <wsdl:output message="tns:ActualizarCorreoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTarea">
+      <wsdl:input message="tns:ActualizarTareaSoapIn" />
+      <wsdl:output message="tns:ActualizarTareaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarTelefono">
+      <wsdl:input message="tns:BorrarTelefonoSoapIn" />
+      <wsdl:output message="tns:BorrarTelefonoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarCorreo">
+      <wsdl:input message="tns:BorrarCorreoSoapIn" />
+      <wsdl:output message="tns:BorrarCorreoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarTarea">
+      <wsdl:input message="tns:BorrarTareaSoapIn" />
+      <wsdl:output message="tns:BorrarTareaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ToDoWSSoap" type="tns:ToDoWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearTelefono">
+      <soap:operation soapAction="http://tempuri.org/CrearTelefono" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCorreo">
+      <soap:operation soapAction="http://tempuri.org/CrearCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTarea">
+      <soap:operation soapAction="http://tempuri.org/CrearTarea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTelefonos">
+      <soap:operation soapAction="http://tempuri.org/ObtenerTelefonos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCorreos">
+      <soap:operation soapAction="http://tempuri.org/ObtenerCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTareas">
+      <soap:operation soapAction="http://tempuri.org/ObtenerTareas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTelefono">
+      <soap:operation soapAction="http://tempuri.org/ActualizarTelefono" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCorreo">
+      <soap:operation soapAction="http://tempuri.org/ActualizarCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTarea">
+      <soap:operation soapAction="http://tempuri.org/ActualizarTarea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarTelefono">
+      <soap:operation soapAction="http://tempuri.org/BorrarTelefono" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarCorreo">
+      <soap:operation soapAction="http://tempuri.org/BorrarCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarTarea">
+      <soap:operation soapAction="http://tempuri.org/BorrarTarea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ToDoWSSoap12" type="tns:ToDoWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearTelefono">
+      <soap12:operation soapAction="http://tempuri.org/CrearTelefono" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCorreo">
+      <soap12:operation soapAction="http://tempuri.org/CrearCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTarea">
+      <soap12:operation soapAction="http://tempuri.org/CrearTarea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTelefonos">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerTelefonos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCorreos">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTareas">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerTareas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTelefono">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarTelefono" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCorreo">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTarea">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarTarea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarTelefono">
+      <soap12:operation soapAction="http://tempuri.org/BorrarTelefono" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarCorreo">
+      <soap12:operation soapAction="http://tempuri.org/BorrarCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarTarea">
+      <soap12:operation soapAction="http://tempuri.org/BorrarTarea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ToDoWS">
+    <wsdl:port name="ToDoWSSoap" binding="tns:ToDoWSSoap">
+      <soap:address location="http://www.todoplanner.somee.com/ToDoWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ToDoWSSoap12" binding="tns:ToDoWSSoap12">
+      <soap12:address location="http://www.todoplanner.somee.com/ToDoWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoWS", "ToDoWS\ToDoWS.csproj", "{A8FA3D48-8218-4492-ACA6-950674B1AD00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoPlanner", "ToDoPlanner\ToDoPlanner.csproj", "{796A8534-F4C9-4D95-BEDE-9E7E1179A2AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8FA3D48-8218-4492-ACA6-950674B1AD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FA3D48-8218-4492-ACA6-950674B1AD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FA3D48-8218-4492-ACA6-950674B1AD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FA3D48-8218-4492-ACA6-950674B1AD00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{796A8534-F4C9-4D95-BEDE-9E7E1179A2AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{796A8534-F4C9-4D95-BEDE-9E7E1179A2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{796A8534-F4C9-4D95-BEDE-9E7E1179A2AB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{796A8534-F4C9-4D95-BEDE-9E7E1179A2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{796A8534-F4C9-4D95-BEDE-9E7E1179A2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{796A8534-F4C9-4D95-BEDE-9E7E1179A2AB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6ACE7BA7-740F-46B1-A218-318E89271953}
+	EndGlobalSection
+EndGlobal
