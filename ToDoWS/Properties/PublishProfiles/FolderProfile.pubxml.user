@@ -151,7 +151,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/ToDoWS.dll">
-      <publishTime>11/26/2019 00:11:47</publishTime>
+      <publishTime>11/26/2019 14:24:44</publishTime>
     </File>
     <File Include="bin/ToDoWS.pdb">
       <publishTime>11/15/2019 03:41:21</publishTime>

@@ -97,6 +97,20 @@ namespace ToDoWS
             resultado = EjecutarSentencia(query, comando);
             return resultado;
         }
+        [WebMethod]
+        public int CrearTarea(string descripcion)
+        {
+            int resultado;
+            SqlCommand comando = new SqlCommand();
+            StringBuilder query = new StringBuilder();
+            // Comando
+            query.Append("INSERT INTO Tarea VALUES(@tarea)");
+            // Parametros
+            comando.Parameters.Add("@tarea", SqlDbType.NVarChar).Value = descripcion;
+
+            resultado = EjecutarSentencia(query, comando);
+            return resultado;
+        }
         // Obtener
         [WebMethod]
         public DataTable ObtenerUsuario()
@@ -108,6 +122,20 @@ namespace ToDoWS
             StringBuilder query = new StringBuilder();
             // Comando
             query.Append("SELECT * FROM Usuario");
+
+            tabla = EjecutarConsulta(query, comando);
+            return tabla;
+        }
+        [WebMethod]
+        public DataTable ObtenerTarea()
+        {
+            // Obtener todas las tareas
+            DataTable tabla = new DataTable();
+            SqlCommand comando = new SqlCommand();
+            // Usar string builder por cuestiones de rendimiento
+            StringBuilder query = new StringBuilder();
+            // Comando
+            query.Append("SELECT * FROM Tarea");
 
             tabla = EjecutarConsulta(query, comando);
             return tabla;
@@ -131,7 +159,22 @@ namespace ToDoWS
             resultado = EjecutarSentencia(query, comando);
             return resultado;
         }
-      
+        [WebMethod]
+        public int ActualizarTarea(int id_tarea, string tarea)
+        {
+            int resultado;
+            SqlCommand comando = new SqlCommand();
+            StringBuilder query = new StringBuilder();
+            // Comando
+            query.Append("UPDATE Tarea SET tarea = @tarea WHERE id = @id_tarea");
+            // Parametros
+            comando.Parameters.Add("@id_tarea", SqlDbType.Int).Value = id_tarea;
+            comando.Parameters.Add("@tarea", SqlDbType.NVarChar).Value = tarea;
+
+            resultado = EjecutarSentencia(query, comando);
+            return resultado;
+        }
+
         // Borrar
         [WebMethod]
         public int BorrarUsuario(int id)
@@ -143,6 +186,20 @@ namespace ToDoWS
             query.Append("DELETE FROM Usuario WHERE Id = @id");
             // Parametros
             comando.Parameters.Add("@id", SqlDbType.Int).Value = id;
+
+            resultado = EjecutarSentencia(query, comando);
+            return resultado;
+        }
+        [WebMethod]
+        public int BorrarTarea(int id_tarea)
+        {
+            int resultado;
+            SqlCommand comando = new SqlCommand();
+            StringBuilder query = new StringBuilder();
+            // Comando
+            query.Append("DELETE FROM Tarea WHERE id = @id_tarea");
+            // Parametros
+            comando.Parameters.Add("@id_tarea", SqlDbType.Int).Value = id_tarea;
 
             resultado = EjecutarSentencia(query, comando);
             return resultado;

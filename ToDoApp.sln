@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoWS", "ToDoWS\ToDoWS.csproj", "{A8FA3D48-8218-4492-ACA6-950674B1AD00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactApp", "ContactApp\ContactApp.csproj", "{C051DF80-41AE-47A8-9BCD-5DA3FC32C2DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifePlanner", "LifePlanner\LifePlanner.csproj", "{DBF1847B-832C-423B-B065-3E5E601446DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,12 @@ Global
 		{A8FA3D48-8218-4492-ACA6-950674B1AD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8FA3D48-8218-4492-ACA6-950674B1AD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8FA3D48-8218-4492-ACA6-950674B1AD00}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C051DF80-41AE-47A8-9BCD-5DA3FC32C2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C051DF80-41AE-47A8-9BCD-5DA3FC32C2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C051DF80-41AE-47A8-9BCD-5DA3FC32C2DD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{C051DF80-41AE-47A8-9BCD-5DA3FC32C2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C051DF80-41AE-47A8-9BCD-5DA3FC32C2DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C051DF80-41AE-47A8-9BCD-5DA3FC32C2DD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DBF1847B-832C-423B-B065-3E5E601446DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF1847B-832C-423B-B065-3E5E601446DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF1847B-832C-423B-B065-3E5E601446DB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DBF1847B-832C-423B-B065-3E5E601446DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF1847B-832C-423B-B065-3E5E601446DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF1847B-832C-423B-B065-3E5E601446DB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
