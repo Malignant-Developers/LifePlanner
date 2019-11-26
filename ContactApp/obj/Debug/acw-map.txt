@@ -1,0 +1,8 @@
+ContactApp.ContactosActivity, ContactApp;md5ab1866b35736916eb17339f177ed5305.ContactosActivity
+ContactApp.ContactosActivity, ContactApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ab1866b35736916eb17339f177ed5305.ContactosActivity
+ContactApp.ContactosActivity;md5ab1866b35736916eb17339f177ed5305.ContactosActivity
+contactapp.ContactosActivity;md5ab1866b35736916eb17339f177ed5305.ContactosActivity
+ContactApp.MainActivity, ContactApp;md5ab1866b35736916eb17339f177ed5305.MainActivity
+ContactApp.MainActivity, ContactApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ab1866b35736916eb17339f177ed5305.MainActivity
+ContactApp.MainActivity;md5ab1866b35736916eb17339f177ed5305.MainActivity
+contactapp.MainActivity;md5ab1866b35736916eb17339f177ed5305.MainActivity
